@@ -18,12 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //修改tabbarItem按钮的渲染颜色  UITabBar 全部这个类都修改
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
-        //创建window
-        self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
-        //创建根控制器
-        self.window?.rootViewController = MainViewController()
-        
-        self.window?.makeKeyAndVisible()
+//        //创建window
+//        self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
+//        //创建根控制器
+//        self.window?.rootViewController = MainViewController()
+//        
+//        self.window?.makeKeyAndVisible()
         
         return true
     }
