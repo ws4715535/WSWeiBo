@@ -8,16 +8,12 @@
 
 import UIKit
 
-class MessageViewController: UITableViewController {
+class MessageViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupVisitorInfo("visitordiscover_image_message", text: "这儿有消息哟~")
     }
 
     override func didReceiveMemoryWarning() {

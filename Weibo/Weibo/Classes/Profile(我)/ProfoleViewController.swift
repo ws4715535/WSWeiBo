@@ -8,16 +8,12 @@
 
 import UIKit
 
-class ProfoleViewController: UITableViewController {
+class ProfoleViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupVisitorInfo("visitordiscover_image_profile", text: "这里有你的信息")
     }
 
     override func didReceiveMemoryWarning() {

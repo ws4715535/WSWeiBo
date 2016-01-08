@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //修改tabbarItem按钮的渲染颜色  UITabBar 全部这个类都修改
         UITabBar.appearance().tintColor = UIColor.orangeColor()
-        
+        UIBarButtonItem.appearance().tintColor = UIColor.orangeColor()
 //        //创建window
 //        self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
 //        //创建根控制器
