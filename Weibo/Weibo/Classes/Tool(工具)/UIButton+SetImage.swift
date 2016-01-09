@@ -25,7 +25,15 @@ extension UIButton {
         sizeToFit()
     }
     
-    
+    convenience init (imageName : String ,target : AnyObject? ,action : Selector){
+        self.init()
+        
+        setImage(UIImage(named: imageName), forState: .Normal)
+        setImage(UIImage(named: imageName + "_highlighted"), forState: .Highlighted)
+        addTarget(target, action: action, forControlEvents: .TouchUpInside)
+        sizeToFit()
+        
+    }
     
     
     

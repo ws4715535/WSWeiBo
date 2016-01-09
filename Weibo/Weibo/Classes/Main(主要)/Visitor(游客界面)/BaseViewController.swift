@@ -13,7 +13,7 @@ class BaseViewController: UITableViewController {
     // MARK:- 属性
     var visitorView :VisitorView?
     
-    var isLogin = false
+    var isLogin = true
     // MARK:- 系统回调函数
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()
