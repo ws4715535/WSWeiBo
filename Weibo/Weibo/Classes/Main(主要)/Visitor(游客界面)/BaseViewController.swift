@@ -13,7 +13,9 @@ class BaseViewController: UITableViewController {
     // MARK:- 属性
     var visitorView :VisitorView?
     
-    var isLogin = true
+    
+    ///是否登录
+    var isLogin = false
     // MARK:- 系统回调函数
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()
@@ -50,7 +52,12 @@ class BaseViewController: UITableViewController {
         print("注册按钮")
     }
     @objc private func loginBtnClick() {
-        print("登陆按钮")
+        
+        
+        let oauth = OAuthController()
+        let navi = UINavigationController(rootViewController: oauth)
+        presentViewController(navi, animated: true, completion: nil)
+        
     }
     
     // MARK:- 增加旋转动画

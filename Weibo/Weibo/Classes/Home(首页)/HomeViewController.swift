@@ -15,9 +15,16 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //增加转盘动画
         startAnimation()
+        
+        //如果没登陆
+        if !isLogin {
+            return
+        }
         //设置导航栏相关
         setupNavigationItem()
+        
     }
     
     // MARK:- 设置导航栏
@@ -40,9 +47,19 @@ class HomeViewController: BaseViewController {
     @objc private func friendBtnClick() {
         print("friendBtnClick")
     }
+    
+    
+    
+    
+    // MARK:- 唤出二维码扫描界面
     @objc private func popBtnClick() {
-        print("popBtnClick")
+        let storyBoard = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let qrcodeVc = storyBoard.instantiateInitialViewController()!
+        qrcodeVc.modalTransitionStyle = .CrossDissolve
+        presentViewController(qrcodeVc, animated: true, completion: nil)
+    
     }
+    
     
     // MARK:- 点击分组按钮
     @objc private func centerBtnClick(sender : WSTitleButton) {
