@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40D3B59521DD60FABF268668 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39308C93E0B677137007B4B3 /* Pods.framework */; };
 		5409BAF31C3FEF870026854E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409BAF21C3FEF870026854E /* BaseViewController.swift */; };
 		5409BAF51C4003B70026854E /* WSTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409BAF41C4003B70026854E /* WSTitleButton.swift */; };
 		540D8B391C43E1C900922CE1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540D8B381C43E1C800922CE1 /* Common.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39308C93E0B677137007B4B3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5409BAF21C3FEF870026854E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5409BAF41C4003B70026854E /* WSTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTitleButton.swift; sourceTree = "<group>"; };
 		540D8B381C43E1C800922CE1 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		545714791C3E9AC6001183CC /* ProfoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfoleViewController.swift; sourceTree = "<group>"; };
 		54BBA7301C42B7FC00252278 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		54BBA7321C42B80C00252278 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
+		A00D5F20007D39338F1A5485 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A453DFE6E449D9CEBA3B6C3E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D3B59521DD60FABF268668 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184CD62AF29480816A8F2174 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39308C93E0B677137007B4B3 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5305805D3F0A18CB02AC4619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A453DFE6E449D9CEBA3B6C3E /* Pods.debug.xcconfig */,
+				A00D5F20007D39338F1A5485 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		540D8B371C43E03000922CE1 /* OAuth(授权) */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +145,8 @@
 			children = (
 				545714571C3E947F001183CC /* Weibo */,
 				545714561C3E947F001183CC /* Products */,
+				5305805D3F0A18CB02AC4619 /* Pods */,
+				184CD62AF29480816A8F2174 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 545714671C3E947F001183CC /* Build configuration list for PBXNativeTarget "Weibo" */;
 			buildPhases = (
+				535490FDFA827068D737D5E4 /* Check Pods Manifest.lock */,
 				545714511C3E947F001183CC /* Sources */,
 				545714521C3E947F001183CC /* Frameworks */,
 				545714531C3E947F001183CC /* Resources */,
+				DAB5629C33D9C598A60B1F35 /* Embed Pods Frameworks */,
+				29CA43241B276B2545B99723 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +328,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29CA43241B276B2545B99723 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		535490FDFA827068D737D5E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB5629C33D9C598A60B1F35 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		545714511C3E947F001183CC /* Sources */ = {
@@ -439,6 +514,7 @@
 		};
 		545714681C3E947F001183CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A453DFE6E449D9CEBA3B6C3E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -454,6 +530,7 @@
 		};
 		545714691C3E947F001183CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00D5F20007D39338F1A5485 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

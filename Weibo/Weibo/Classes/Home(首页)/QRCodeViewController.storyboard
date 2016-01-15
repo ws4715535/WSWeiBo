@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6WV-AQ-atP" firstAttribute="width" secondItem="skR-F7-YXS" secondAttribute="width" id="HVa-0a-pnw"/>
                                     <constraint firstItem="6WV-AQ-atP" firstAttribute="top" secondItem="skR-F7-YXS" secondAttribute="top" id="HsD-cv-DMp"/>
@@ -61,7 +61,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="skR-F7-YXS" firstAttribute="centerY" secondItem="481-DW-b18" secondAttribute="centerY" id="3mH-ep-CMf"/>
                             <constraint firstItem="skR-F7-YXS" firstAttribute="centerX" secondItem="481-DW-b18" secondAttribute="centerX" id="82d-9U-W4e"/>

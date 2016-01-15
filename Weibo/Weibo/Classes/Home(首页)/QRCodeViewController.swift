@@ -39,7 +39,7 @@ class QRCodeViewController: UIViewController {
         let session = AVCaptureSession()
         
         //2.添加输入设备
-        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeAudio)
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         guard let input = try? AVCaptureDeviceInput(device: device) else {
             print("无法检测到输入设备")
             return
@@ -58,6 +58,7 @@ class QRCodeViewController: UIViewController {
         //4.添加预览图层 也就是打开摄像头后的展示的图层
         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.frame = view.bounds
+        print(view.bounds)
             //添加到最底下
         view.layer.insertSublayer(previewLayer, atIndex: 0)
         
